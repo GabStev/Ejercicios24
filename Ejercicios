@@ -334,3 +334,61 @@ var_dump(EjerNueve(14));
 echo "<hr>\n";
 
 ?>
+<?php
+/*EJERCICIO 12
+
+ * 
+ *  */
+
+function EjerDoce(array $numeros){
+    $suma=0;
+    $sumaMayores=0;
+    $nelementos=  (1/2)*count($numeros);    
+        for($i=0;$i<$nelementos-1; $i++){
+            //echo $numeros[$i];
+                    $suma+=$numeros[$i];
+        }
+        //echo "suma es:". $suma;
+        for($j=count($numeros)-1;$j>$nelementos; $j--){
+                    $sumaMayores+=$numeros[$j];
+        }
+        //echo "suma es:". $sumaMayores;
+        
+        if($suma==$sumaMayores){
+            echo $i;
+            echo "<hr>\n";
+        }
+}
+?>
+<?php
+/*EJERCICIO 15
+
+ * 
+ *  */
+function EjerQuince(array $numeros){
+    $nelementos=  count($numeros);
+    $suma=0;
+    $result=$numeros[1];
+    
+        for($i=0;$i<$nelementos; $i++){
+                //echo $numeros[$i];
+                $suma+=$numeros[$i];
+                //
+                //
+                //echo $suma;
+               
+                if($numeros[$i]>$suma)
+                    $result=$numeros[$i];
+                else {
+                    if($suma>$result)
+                    $result=$suma;
+                    
+                }
+                              
+            
+    }
+    echo $result;
+}
+
+EjerQuince( [4, -3, 7, 2, 4, -5, 1, 2] );
+?>
