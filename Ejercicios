@@ -473,3 +473,4 @@ else
     }
 }
 echo "El resultado de la suma es ".$resultado;
+?>
