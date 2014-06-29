@@ -392,3 +392,45 @@ function EjerQuince(array $numeros){
 
 EjerQuince( [4, -3, 7, 2, 4, -5, 1, 2] );
 ?>
+<?php //Ejercicio 10
+
+$x = 5;
+$varaux = 0;
+$y = 7;
+$resultado = -1;
+$noencontrado = 1;
+if ($x > $y)
+{
+    $varaux = $x;
+    $x = $y;
+    $y = $varaux;
+}
+for ($i = $x; $i <= $y; $i++)
+{
+    $sum = 1;
+    $n = $i;
+    if ($noencontrado == 1) { 
+        for ($compt = 2; $compt * $compt <= $n; $compt++)
+        {
+            if ($compt * $compt == $n)
+            {
+                $sum = $sum + $compt;
+            }
+            else if ($n % $compt == 0)
+            {
+                $sum = $sum + $compt;
+                $sum = $sum + $n / $compt;
+            }
+        }
+        if (($sum == $n) & ($n != 0) & ($n != 1))
+        { 
+            echo("El menor numero perfecto encontrado es: ".$n);
+            $noencontrado = 0;
+        }
+    }         
+}
+if ($noencontrado == 1)
+{
+    echo "No se encontro numero perfecto, por lo tanto el resultado es: ".$resultado;
+}
+?>
