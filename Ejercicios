@@ -474,3 +474,35 @@ else
 }
 echo "El resultado de la suma es ".$resultado;
 ?>
+<?php //Ejercicio Nº 19
+function contarbinario($numero=26)
+{ 
+  $valor = $numero;
+  $cadenita = "";
+  $contar=0;
+  while ($valor > 0)
+    {
+    $modulo = $valor % 2;
+    # % Módulo o Resto de valor dividido entre 2
+    $cadenita = "$modulo".$cadenita;
+    # Concatenamos modulo(string), con cadena
+    $valor = intval($valor / 2);
+    # Dividimos valor / 2 hasta que sea uno o cero
+    # intval — Obtener el valor entero de una variable
+    }
+    echo "<hr>\n";
+    echo "El numero $numero equivale a $cadenita en binario";
+    
+  
+for($i=0;$i<strlen($cadenita);$i++)
+{
+    if($cadenita[$i]=="1")
+    {
+        $contar=$contar+1;
+    }
+}
+ echo "</br>";
+ echo $contar;
+}
+echo contarbinario();
+?>
